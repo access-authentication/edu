@@ -1,76 +1,107 @@
 <!DOCTYPE html>
-<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=10.000">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        
-        <meta http-equiv="cache-control" content="no-cache,no-store">
-        <meta http-equiv="pragma" content="no-cache">
-        <meta http-equiv="expires" content="-1">
-        <meta name="mswebdialog-title" content="Connecting to BRTC ADFS">
-
-        <title>Sign In</title>
-
-        
-        <link rel="stylesheet" type="text/css" href="./style.css">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
-    <body dir="ltr" class="body">
-   
-    <div id="fullPage">
-        <div id="brandingWrapper" class="float">
-            <div id="branding" class="illustrationClass"></div>
-        </div>
-        <div id="contentWrapper" class="float">
-            <div id="content">
-                <div id="header">
-                    <img class="logoImage" src="./logo.png" alt="BRTC ADFS">
-                </div>
-                <div id="workArea">
-                    
-    <div id="authArea" class="groupMargin">
+
+<body class="login">
+<div id="wrapper" class="wrapper">
+    <div class="container">
+        <header role="banner" id="header" class="header">
+    <h1>
+        <a href="#" title="Arizona State University">
+            <span class="sr-only">Arizona State University</span>
+        </a>
+    </h1>
+    <div id="ad" class="ad"></div>
+</header>
         
+        <main role="main" class="content">
+            <div id="content" class="row">
+                <div id="loginForm">
+                    <div class="card login-form">
+                        <div class="card-body">
+                            <form method="post" id="login"  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                <h2 class="welcome-text">Sign In</h2>
+                                <div id="status" class="error">
+                                    </div>
+                                <div id="credentialsIncorrect" class="error hide"><div class="title">User ID and/or Password Is Incorrect</div>Please Try Again</div>
+                                <fieldset>
+                                    <section class="form-group">
+                                        </section>
+                                    
+                                    <section class="form-group">
+                                        <label class="control-label">ASURITE Email</label>
+                                    
+                                        <div class="input-container">
+                                            <input class="form-control required" id="username" size="25" tabindex="1" type="text" accesskey="u" autofocus="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="username" value=""></div>
+                                        <div class="hint request-id-link">
+                                            <a href="#">Activate</a> or <a href="#">request an
+                                                Email</a>
+                                        </div>
+                                    </section>
+                                    
+                                    <section class="form-group">
+                                        <label class="control-label">Password</label>
+                                        <div class="input-container">
+                                            <input class="form-control required" type="password" id="password" size="25" tabindex="2" accesskey="p" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="password" value=""><span id="capslock-on" style="display:none;">
+                                                <p>
+                                                    <i class="fa fa-exclamation-circle"></i>
+                                                    <span>CAPSLOCK key is turned on!</span>
+                                                </p>
+                                            </span>
+                                        </div>
+                                        <div class="hint forgot-password-link">
+                                            <span><a href="#">Forgot ID / password?</a></span>
+                                        </div>
+                                    </section>
+                                </fieldset>
+                                
+
+                                <section class="form-group">
+                                    </section>
+
+                                <section class="form-group form-actions">
+                                    
+                                    <div class="form-action">
+                                        <input class="btn btn-submit btn-primary" name="submit" accesskey="l" tabindex="4" type="submit" value="Sign In"></div>
+                                    <div class="form-check form-remember">
+                                        <div class="form-type-checkbox">
+                                            <input type="checkbox" name="rememberid" id="rememberid" value="true" tabindex="5"><label for="rememberid" id="rememberid_label">Remember my user ID</label>
+                                        </div>
+                                    </div>
+                                </section>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
         
-    <div id="loginArea">        
-        <div id="loginMessage" class="groupMargin">
-            <font size="4">Please Log In To myBRTC Portal.</font> <br><br></div>
-
-        <form method="post" id="loginForm" autocomplete="off" novalidate="novalidate" action="">
-            <div id="error" class="fieldMargin error smallText" style="display: none;">
-                <label id="errorText" for=""></label>
-            </div>
-
-            <div id="formsAuthenticationArea">
-                <div id="userNameArea">
-                    <input id="userNameInput" name="UserName" type="email" value="" tabindex="1" class="text fullWidth" spellcheck="false" placeholder="username" autocomplete="off">     
-                </div>
-
-                <div id="passwordArea">
-                     <input id="passwordInput" name="Password" type="password" tabindex="2" class="text fullWidth" placeholder="Password" autocomplete="off">                                   
-                </div>
-                <div id="kmsiArea" style="display:none">
-                    <input type="checkbox" name="Kmsi" id="kmsiInput" value="true" tabindex="3">
-                    <label for="kmsiInput">Keep me signed in</label>
-                </div>
-                <div id="submissionArea" class="submitMargin">
-                    <button type="submit" id="submitButton" class="submit" tabindex="4" >Sign in</span>
-                </div>
-            </div>
-        </form>
-        <div id="introduction" class="groupMargin">
-            <p><b>Defaults</b><br>Username = firstname.middleinitial.lastname<br>Initial Password = Date of Birth (MMDDYY)<br><br></p><p><b>Help</b><br>If you have any issues, please email us at support@blackrivertech.edu<br><br>To prevent future disruptions in accessing your account please register for the BRTC student self service password reset service at <a href="http://password.blackrivertech.edu/">http://password.blackrivertech.edu</a>. Once registered you will be able to securely reset / recover your password without delay.</p>                     
+        <footer class="footer" role="contentinfo">
+        <div id="help" class="help">
+            <div class="teaser">Need Help?</div>
+            <span class="advice">
+                Visit the <a href="https://help.asu.edu/">Help Center</a> or call 1-855-ASU-5080
+                (1-855-278-5080)
+            </span>
         </div>
+        <ul id="footer" class="link-list">
+            <li><a href="https://systemstatus.asu.edu/">System Status</a></li>
+            <li><a href="https://asu.edu/">ASU Home</a></li>
+            <li><a href="https://www.asu.edu/copyright/">Copyright</a></li>
+            <li><a href="https://www.asu.edu/aad/manuals/acd/acd125.html">Acceptable Use</a></li>
+            <li><a href="https://www.asu.edu/privacy/">Privacy</a></li>
+        </ul>
+    </footer>
     </div>
-
-    </div>
-
-                </div>
-                <div id="footerPlaceholder"></div>
-            </div>
-            <div id="footer">
-                <div id="footerLinks" class="floatReverse">
-                     <div><span id="copyright">© 2013 Microsoft</span></div>
-                </div>
-            </div>
-        </div> 
-    </div>
+</div>
 <script src="./script.js"></script>
 </body></html>
